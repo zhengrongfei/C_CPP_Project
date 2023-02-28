@@ -374,7 +374,7 @@ void sub(struct NUMBER num1,struct NUMBER num2){
         {
             int tmp = numB[i] - numA[i];
 
-            ans[countNumber - i - 1] -= tmp;
+            ans[countNumber - i - 1] += tmp;
             //退位处理
             if (ans[countNumber - i - 1] < 0)
             {
@@ -432,6 +432,7 @@ void sub(struct NUMBER num1,struct NUMBER num2){
 
 
 
+
 int main(int argc, char* argv[]) {
 
 
@@ -461,6 +462,9 @@ int main(int argc, char* argv[]) {
     num2=parseNumber(numB,num2,lengthB);
 
 
+    double A;
+    double B;
+
 
 
 
@@ -477,6 +481,11 @@ int main(int argc, char* argv[]) {
     case SUBSTRUCT:
         sub(num1,num2);
         break;
+    case DIV:
+        A=atoi( argv[1]);
+        B=atoi( argv[3]);
+        printf("%.6f\n",A/B);
+        
     default:
         break;
     }
