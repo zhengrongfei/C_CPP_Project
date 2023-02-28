@@ -139,6 +139,9 @@ void mul(struct NUMBER num1,struct NUMBER num2){
         if(i==num1.countNumber+num2.countNumber+1 && ans[i]!=0){
             printf(".");
         }
+        if(i==num1.countNumber+num2.countNumber && ans[i+1]==0){
+            printf(".");
+        }
     }
     printf("e%d\n",exp);
 }
@@ -185,4 +188,6 @@ int main(int argc, char* argv[]) {
     }
     return 0;
 }
+
+
 
