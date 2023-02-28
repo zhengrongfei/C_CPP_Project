@@ -40,6 +40,9 @@ struct NUMBER{
     int e=0;
     
     //第一个数字
+    if(!isdigit(num[begin])){
+         printf("请输入正确的数字！");
+    }
     res.x=num[begin]-'0';
     for(int i = begin+1 ;i < size ;i++ ){
 
@@ -70,6 +73,9 @@ struct NUMBER{
         }
         else if(num[i]=='.'){
             hasDot=true;
+        }
+        else{
+            printf("请输入正确的数字！");
         }
     }
 
